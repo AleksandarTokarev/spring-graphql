@@ -18,14 +18,14 @@ public class AuthorRepository {
 
     public Author findById(int id) {
         return authors.stream()
-                .filter(author -> author.id() == id)
+                .filter(author -> author.getId() == id)
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("Author not found"));
     }
 
     public Author findByName(String name) {
         return authors.stream()
-                .filter(author -> author.fullName().equals(name))
+                .filter(author -> author.getFirstName().equals(name))
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("Author not found"));
     }
