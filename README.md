@@ -20,3 +20,25 @@ The Maven plugin maven-resources-plugin will copy the contents of the build dire
 Once the artifact has been created you can run the application using the following command: 
 
 ` java -jar target/spring-books-0.0.1-SNAPSHOT.jar`
+
+
+## Advantages of GraphQL over REST
+1. You can specify which fields should be return on the API call itself - means fewer bandwidth on slow internet
+2. You make one call to the backend - one request - which executes multiple `endpoints` - see example below. This means better performance and reducing
+overfetching or underfetching in API's
+```
+query {
+  findOne(id: 1) {
+    title
+  }
+  allBooks{
+    title
+  }
+}
+```
+
+## Advantages of REST over GraphQL
+1. HTTP Caching - this is not possible in GraphQL and has to be custom build
+2. Monitoring and Error Reporting - GraphQL is one endpoint and HTTP is always 200 - so hard to monitor and track errors
+
+https://www.imaginarycloud.com/blog/graphql-vs-rest/
