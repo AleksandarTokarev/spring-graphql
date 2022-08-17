@@ -42,3 +42,5 @@ query {
 2. Monitoring and Error Reporting - GraphQL is one endpoint and HTTP is always 200 - so hard to monitor and track errors
 
 https://www.imaginarycloud.com/blog/graphql-vs-rest/
+
+## TBD
